@@ -190,6 +190,7 @@ public class GUI extends JFrame implements ActionListener, KeyListener{
 
 			if(clickAddbutton == 0) {
 				namnRuta.setText("");
+				nummerRuta.setText("");
 				skrivaInText.setText("Type in name and phone number");
 				namnRuta.setEditable(true);
 				nummerRuta.setEditable(true);
@@ -229,6 +230,7 @@ public class GUI extends JFrame implements ActionListener, KeyListener{
 	
 	// Laddar phonebook, gör egen metod för att inte upprepa kod
 	private void loadPhoneBook() {
+		phonebook = new PhoneBook();
 		// kallar på load, text = textfilens namn
 		String text = skrivaInText.getText();
 
